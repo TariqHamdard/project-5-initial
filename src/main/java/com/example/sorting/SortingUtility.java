@@ -86,9 +86,10 @@ public class SortingUtility {
 
         int pos = upperBound;
         while (pos > 0 && data[pos - 1].compareTo(data[pos]) > 0) {
-            swap(data,pos, pos - 1);
+            swap(data, pos - 1, pos);
+
+            pos = pos - 1;
         }
-        pos = pos - 1;
 
         // TODO implement pseudocode above
     }
