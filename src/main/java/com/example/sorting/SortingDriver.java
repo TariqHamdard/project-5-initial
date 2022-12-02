@@ -23,7 +23,7 @@ public class SortingDriver {
         printFirstTenOfArray(copy1);
 
         System.out.println("\nGnomier Sort...");
-        SortingUtility.gnomierSort(copy2);
+        //SortingUtility.gnomierSort(copy2);
         printFirstTenOfArray(copy2);
 
     }

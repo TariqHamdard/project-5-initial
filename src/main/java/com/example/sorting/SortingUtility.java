@@ -24,6 +24,19 @@ public class SortingUtility {
      */
     public static <T extends Comparable<T>> void gnomeSort(T[] data) {
 
+
+        int pos = 0;
+        int x = data.length;
+        while (pos < x) {
+            if ((pos == 0) || (data[pos].compareTo(data[pos - 1])) >= 0) {
+
+                pos = pos + 1;
+            } else {
+                swap(data, pos, pos - 1);
+                pos = pos - 1;
+            }
+        }
+
         // TODO implement pseudocode above
 
     }
@@ -45,7 +58,10 @@ public class SortingUtility {
      */
     public static <T extends Comparable<T>> void gnomierSort(T[] data) {
 
-        // TODO implement pseudocode above
+        for (int pos = 1; pos < data.length; pos++) {
+            gnomierSort(data, pos);
+        }
+
 
     }
 
@@ -66,6 +82,13 @@ public class SortingUtility {
      * @param <T>
      */
     private static <T extends Comparable<T>> void gnomierSort(T[] data, int upperBound) {
+
+
+        int pos = upperBound;
+        while (pos > 0 && data[pos - 1].compareTo(data[pos]) > 0) {
+            swap(data,pos, pos - 1);
+        }
+        pos = pos - 1;
 
         // TODO implement pseudocode above
     }
